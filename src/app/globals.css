@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* ------ تعريف الخطوط ------ */
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-Regular.woff2') format('woff2'),
+       url('/fonts/Rubik-Regular.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-Medium.woff2') format('woff2'),
+       url('/fonts/Rubik-Medium.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'AnasArmFileBrowser';
+  src:
+    url('fonts/anas-arm-file-browser.ttf') format('truetype'),
+    url('fonts/anas-arm-file-browser.woff') format('woff'),
+    url('fonts/anas-arm-file-browser.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ------  متغيرات المشروع اللونية ------ */
+
+@theme {
+  --color-background: oklch(100% 0 0); /* #ffffff */
+  --color-foreground: oklch(20.5% 0 0); /* #171717 */
+  --color-main: oklch(60.7% 0.264 281.1); /* #4f39f6 */
+  --color-main-text: oklch(0% 0 0); /* #000000 */
+}
+
+
+/* ------  التنسيقات العامة ------ */
+
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Rubik', sans-serif;
+  }
+
+  body::selection{
+    @apply bg-main text-background
+  }
+
+
+  /* التنسيقات الخاصة بعرض الإيقونات  */
+
+  i {
+    font-family: 'anas-arm-file-browser' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-file-picture:before {
+    content: "\e927";
+  }
+  .icon-file-voice:before {
+    content: "\e928";
+  }
+  .icon-file-video:before {
+    content: "\e92a";
+  }
+  .icon-folder-open:before {
+    content: "\e930";
+  }
+  .icon-download:before {
+    content: "\e960";
+  }
+  .icon-upload:before {
+    content: "\e961";
+  }
+  .icon-loading:before {
+    content: "\e982";
+  }
+  .icon-search:before {
+    content: "\e986";
+  }
+  .icon-options:before {
+    content: "\e992";
+  }
+  .icon-play-btn:before {
+    content: "\ea1c";
+  }
+  .icon-pause-btn:before {
+    content: "\ea1d";
+  }
+  .icon-stop-btn:before {
+    content: "\ea1e";
+  }
+  .icon-backward-btn:before {
+    content: "\ea1f";
+  }
+  .icon-forward-btn:before {
+    content: "\ea20";
+  }
+  .icon-volume-level-icon:before {
+    content: "\ea27";
+  }
+  .icon-volume-mute-icon:before {
+    content: "\ea2a";
+  }
+  .icon-arrow-right:before {
+    content: "\ea34";
+  }
+  .icon-arrow-left:before {
+    content: "\ea38";
+  }
+
+    /* نهاية التنسيقات الخاصة بعرض الإيقونات  */
+
+/* ------ الفئات المخصصَّة ------ */
+
+@layer components {
+  .cir-btn {
+    @apply rounded-full bg-main p-4 font-bold text-white shadow-sm;
+  }
+
+  .seq-btn {
+    @apply rounded-full bg-main p-4 font-bold text-white shadow-sm;
+  }
+
+  .text-input {
+    @apply w-full rounded-lg border border-gray-300 p-2 focus:ring-1 focus:ring-main focus:outline-none;
+  }
+
+  .main-header {
+    @apply fixed right-0 top-0 z-50 flex h-[20vh] w-screen items-center justify-around gap-12 p-3 max-sm:h-fit bg-background;  
+  }
+
+  .dir-container {
+    @apply flex justify-center items-center gap-2 max-sm:hidden;
+  }
+
+  .data-container{
+    @apply inline-flex rounded p-6 hover:cursor-pointer hover:shadow-sm hover:ring-1 hover:ring-main;
+  }
+}
+
