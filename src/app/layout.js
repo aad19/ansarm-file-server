@@ -43,14 +43,23 @@ export default function RootLayout({ children }) {
               <Button 
                 className="cir-btn" 
                 onClick={handleNavigateBack} 
-                iconName="icon-arrow-left" 
-              />
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+</svg>
+
+              </Button>
 
               <Button 
                 className="cir-btn" 
                 onClick={handleNavigateBack} 
-                iconName="icon-arrow-right" 
-              />
+              
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+</svg>
+
+              </Button>
             
             </div>
 
@@ -66,7 +75,13 @@ export default function RootLayout({ children }) {
                 className="cir-btn" 
                 onClick={handleNavigateBack} 
                 iconName="icon-upload" 
-                />
+                >
+
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+</svg>
+
+                </Button>
           
           </header>
 
