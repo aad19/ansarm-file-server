@@ -1,10 +1,6 @@
-
 import { createYoga } from 'graphql-yoga'
 import { resolvers } from '@/graphql/resolvers'
-import { readFileSync } from 'node:fs'
-import { join } from 'node:path'
-
-const typeDefs = readFileSync(join(process.cwd(), 'src/graphql/schema.graphql'), 'utf8')
+import { typeDefs } from '@/graphql/schema'
 
 const { handleRequest } = createYoga({
   schema: {

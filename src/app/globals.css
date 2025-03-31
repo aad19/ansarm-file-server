@@ -20,10 +20,11 @@
 /* ------  متغيرات المشروع اللونية ------ */
 
 @theme {
-  --color-background: oklch(100% 0 0); /* #ffffff */
-  --color-foreground: oklch(20.5% 0 0); /* #171717 */
-  --color-main: oklch(60.7% 0.264 281.1); /* #4f39f6 */
-  --color-main-text: oklch(0% 0 0); /* #000000 */
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(20.5% 0 0); 
+  --color-main: oklch(0.359 0.144 278.697);
+  --color-main-text: oklch(0% 0 0);
+  --color-hover: oklch(0.457 0.24 277.023);
 }
 
 
@@ -46,19 +47,19 @@
 
 @layer components {
   .cir-btn {
-    @apply rounded-full bg-main p-4 font-bold text-white shadow-sm;
+    @apply rounded-full bg-main p-4 font-bold text-white shadow-sm cursor-pointer hover:bg-hover;
   }
 
   .seq-btn {
-    @apply rounded-full bg-main p-4 font-bold text-white shadow-sm;
+    @apply rounded-full bg-main p-4 font-bold text-white shadow-sm cursor-pointer hover:bg-hover;
   }
 
   .text-input {
-    @apply w-full rounded-lg border border-gray-300 p-2 focus:ring-1 focus:ring-main focus:outline-none;
+    @apply w-full rounded-lg border border-gray-300 p-2 focus:ring-1 focus:ring-main focus:outline-none text-background shadow-sm;
   }
 
   .main-header {
-    @apply fixed right-0 top-0 z-50 flex h-[20vh] w-screen items-center justify-around gap-12 p-3 max-sm:h-fit bg-background;  
+    @apply fixed right-0 top-0 z-50 flex h-[20vh] w-screen items-center justify-around gap-12 p-3 max-sm:h-fit bg-background font-semibold;  
   }
 
   .dir-container {
